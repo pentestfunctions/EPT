@@ -1,5 +1,7 @@
 #!/bin/bash
 
+initial_dir=$(pwd)
+
 # Check if the script is running as root
 if [ "$(id -u)" -eq 0 ]; then
   echo "This script should not be run as root. Please run without sudo."
@@ -269,6 +271,7 @@ fix_python_environment() {
 
 function enable_extensions() {
     # Enable user extensions in GNOME
+    cd "$initial_dir"
     gsettings set org.gnome.shell disable-user-extensions false
     gnome-extensions enable "dash-to-panel@jderose9.github.com"
     gnome-extensions enable "arcmenu@arcmenu.com"
@@ -300,6 +303,7 @@ install_hosting_folder
 sudo gem install wpscan
 enable_extensions
 
+cd "$initial_dir"
 cp resources/.bashrc ~/.bashrc
 source ~/.bashrc
 echo "All Tools seem to be installed!"
