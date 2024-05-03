@@ -1,0 +1,19 @@
+[/]
+arcmenu-extra-categories-links=[(0, true), (1, true), (2, true), (3, true), (4, true)]
+avatar-style='Round'
+custom-menu-button-icon='~/Pictures/start_icon.png'
+custom-menu-button-icon-size=30.0
+default-menu-view='All_Programs'
+disable-user-avatar=false
+distro-icon=9
+menu-button-appearance='Icon'
+menu-button-icon='Distro_Icon'
+menu-hotkey='Undefined'
+menu-layout='Default'
+mint-pinned-app-list=['Brave Web Browser', 'brave-browser', 'brave-browser.desktop', 'Terminal', 'utilities-terminal', 'org.gnome.Terminal.desktop', 'Settings', 'emblem-system-symbolic', 'org.gnome.Settings.desktop', 'Software', '', 'org.gnome.Software.desktop', 'Files', 'system-file-manager', 'org.gnome.Nautilus.desktop', 'Log Out', 'application-exit-symbolic', 'ArcMenu_LogOut', 'Lock', 'changes-prevent-symbolic', 'ArcMenu_Lock', 'Power Off', 'system-shutdown-symbolic', 'ArcMenu_PowerOff']
+multi-monitor=false
+pinned-app-list=['Brave Web Browser', '', 'brave-browser.desktop', 'Files', '', 'org.gnome.Nautilus.desktop', 'Terminal', '', 'org.gnome.Terminal.desktop', 'ArcMenu Settings', 'ArcMenu_ArcMenuIcon', 'gnome-extensions prefs arcmenu@arcmenu.com']
+prefs-visible-page=0
+right-panel-width=205
+runner-menu-hotkey='Custom'
+vert-separator=false
