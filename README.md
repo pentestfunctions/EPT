@@ -39,7 +39,7 @@ apt install git -y  # Install git
 
 ### 📡 Step 2: Clone and Run Setup Script
 ```bash
-git clone https://github.com/pentestfunctions/test-setup.git
+git clone https://github.com/pentestfunctions/EPT.git
 cd EPT
 chmod +x setup.sh
 ./setup.sh
