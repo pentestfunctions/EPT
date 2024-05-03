@@ -1,6 +1,8 @@
 #!/bin/bash
 
 initial_dir=$(pwd)
+gsettings set org.gnome.desktop.screensaver lock-enabled false
+gsettings set org.gnome.desktop.session idle-delay 0
 
 # Check if the script is running as root
 if [ "$(id -u)" -eq 0 ]; then
@@ -303,6 +305,7 @@ sudo apt autoremove -y > /dev/null 2>&1
 sudo apt autoclean -y > /dev/null 2>&1
 sudo apt install xfce4-terminal -y > /dev/null 2>&1 && echo -e "\033[0;32mxfce4-terminal installation was successful\033[0m" || echo "Installation failed"
 sudo apt remove gnome-terminal -y  > /dev/null 2>&1 && echo -e "\033[0;32mgnome-terminal is already removed\033[0m" || echo "gnome-terminal removal failed"
+sudo apt install burpsuite mousepad -y
 
 install_tools
 install_rust_scan
@@ -314,9 +317,6 @@ install_metasploit
 install_hosting_folder
 [ -x "$(command -v wpscan)" ] && echo -e "\033[0;32mwpscan is already installed\033[0m" || (sudo gem install wpscan && echo -e "\033[0;32mInstallation successful\033[0m")
 enable_extensions
-
-gsettings set org.gnome.desktop.screensaver lock-enabled false
-gsettings set org.gnome.desktop.session idle-delay 0
 
 cd "$initial_dir"
 cp resources/.bashrc ~/.bashrc
