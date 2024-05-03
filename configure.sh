@@ -189,7 +189,7 @@ install_rust_scan() {
 # Setting a new wallpaper
 install_wallpaper_settings() {
     gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-    wget -O ~/Pictures/background.jpg "https://pbs.twimg.com/media/EYUgEFkWsAE-Tkg?format=jpg&name=4096x4096"
+    sudo mv resources/background.jpg ~/Pictures/background.jpg
     gsettings set org.gnome.desktop.background picture-uri-dark "file:///home/$USER/Pictures/background.jpg"
     gsettings set org.gnome.desktop.background picture-uri "file:///home/$USER/Pictures/background.jpg"
 }
@@ -272,11 +272,11 @@ function enable_extensions() {
     gsettings set org.gnome.shell disable-user-extensions false
     gnome-extensions enable "dash-to-panel@jderose9.github.com"
     gnome-extensions enable "arcmenu@arcmenu.com"
-    dconf load /org/gnome/shell/extensions/dash-to-panel/ < dash_settings
-    dconf load /org/gnome/shell/extensions/arcmenu/ < ArcMenu_Settings
+    dconf load /org/gnome/shell/extensions/dash-to-panel/ < resources/dash_settings
+    dconf load /org/gnome/shell/extensions/arcmenu/ < resources/ArcMenu_Settings
     gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
     sudo apt install xfce4-terminal -y
-    cp terminalrc ~/.config/xfce4/terminal/terminalrc
+    cp resources/terminalrc ~/.config/xfce4/terminal/terminalrc
 }
 
 sudo apt purge --autoremove gnome-games -y
