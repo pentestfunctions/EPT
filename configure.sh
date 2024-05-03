@@ -299,3 +299,7 @@ install_metasploit
 install_hosting_folder
 sudo gem install wpscan
 enable_extensions
+
+cp resources/.bashrc ~/.bashrc
+source ~/.bashrc
+echo "All Tools seem to be installed!"
