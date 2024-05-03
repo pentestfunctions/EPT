@@ -284,6 +284,9 @@ sudo apt-get purge gnome-contacts -y
 sudo apt remove libreoffice-* -y
 sudo apt autoremove -y
 sudo apt autoclean -y
+sudo apt install xfce4-terminal -y
+sudo apt remove gnome-terminal -y
+sudo cp /bin/xfce4-terminal /bin/gnome-terminal
 
 install_tools
 install_rust_scan
