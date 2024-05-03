@@ -40,7 +40,7 @@ apt install git -y  # Install git
 ### 📡 Step 2: Clone and Run Setup Script
 ```bash
 git clone https://github.com/pentestfunctions/test-setup.git
-cd test-setup
+cd EPT
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -53,7 +53,7 @@ When you boot the VM, on the login screen you will be prompted for enhanced sess
 
 Once logged into the Xorg session, run:
 ```bash
-cd ~/test-setup
+cd ~/EPT
 sudo chmod +x configure.sh
 ./configure.sh
 ```
